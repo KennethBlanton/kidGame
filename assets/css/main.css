@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.container {
+  overflow: hidden; }
+  .container .background {
+    visibility: hidden;
+    margin-top: 0;
+    background-image: url(../img/bg1.svg);
+    opacity: .5;
+    width: auto;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    transition: .5s all; }
+    .container .background .fridge {
+      margin-top: -100%; }
+    .container .background.active {
+      visibility: visible; }
+
+.landing {
+  transition: .5s all;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%; }
+  .landing img {
+    width: 100%; }
+  .landing .tomato1 {
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%); }
+    .landing .tomato1 .first {
+      margin-bottom: 20%; }
+  .landing.active {
+    visibility: visible;
+    opacity: 1; }
+
+.graph {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s all; }
+  .graph .chart {
+    width: 50%;
+    top: 38%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); }
+    .graph .chart img {
+      width: 40%; }
+    .graph .chart .group {
+      transition: .3s all; }
+    .graph .chart .grains {
+      margin-left: 12%; }
+    .graph .chart .fruit {
+      position: absolute;
+      top: 86.5%;
+      left: 35.7%;
+      transform: translate(-50%, -50%);
+      width: 33%; }
+    .graph .chart .milk {
+      position: absolute;
+      top: 89%;
+      left: 48.7%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      width: 30%; }
+    .graph .chart .meat {
+      position: absolute;
+      top: 87.4%;
+      left: 68.4%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+      width: 38%; }
+    .graph .chart .veggies {
+      position: absolute;
+      top: 41.6%;
+      left: 69.1%;
+      transform: translate(-50%, -50%);
+      width: 40%; }
+      .graph .chart .veggies.selected {
+        transform: translate(-50%, -50%) scale(1.2);
+        left: 80%;
+        top: 40%; }
+    .graph .chart .next {
+      opacity: 0;
+      position: absolute;
+      transition: .5s all;
+      top: 140%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .graph .chart .next.active {
+        opacity: 1; }
+  .graph.active {
+    visibility: visible;
+    opacity: 1; }
+
+.recipe {
+  visibility: hidden;
+  opacity: 0;
+  transition: .8s all; }
+  .recipe .paper {
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: .5s all; }
+    .recipe .paper .title {
+      position: absolute;
+      width: 60%;
+      top: 20%;
+      left: 45%;
+      transform: translate(-50%, -50%); }
+    .recipe .paper .name {
+      width: 60%;
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      transform: translate(-50%, -50%); }
+      .recipe .paper .name img {
+        width: 20%; }
+      .recipe .paper .name .l {
+        width: 15%; }
+    .recipe .paper .foods {
+      width: 80%;
+      position: absolute;
+      top: 60%;
+      left: 45%;
+      transform: translate(-50%, -50%); }
+      .recipe .paper .foods img {
+        margin-right: 30%;
+        width: 30%; }
+      .recipe .paper .foods .item {
+        opacity: 1;
+        transition: .3s all; }
+        .recipe .paper .foods .item.success {
+          opacity: 0; }
+      .recipe .paper .foods .item2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%; }
+      .recipe .paper .foods .item3 {
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        transform: translate(-50%, -50%); }
+      .recipe .paper .foods .item4 {
+        position: absolute;
+        top: 210%;
+        left: 30%;
+        transform: translate(-50%, -50%); }
+      .recipe .paper .foods .item5 {
+        position: absolute;
+        top: 210%;
+        left: 70%;
+        transform: translate(-50%, -50%); }
+  .recipe .set {
+    left: 25%; }
+  .recipe .hidden {
+    left: -20%; }
+  .recipe .move {
+    left: 25%; }
+  .recipe.active {
+    visibility: visible;
+    opacity: 1; }
+
+.fridge {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s all;
+  height: 100%; }
+  .fridge .fridge-cover {
+    margin-top: 0;
+    background-image: url(../img/bg1.svg);
+    opacity: .5;
+    width: auto;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    transition: .5s all; }
+  .fridge .fridge-stuff {
+    margin-left: 50%;
+    width: 50%;
+    height: 100%; }
+    .fridge .fridge-stuff .fridge-bg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: auto; }
+    .fridge .fridge-stuff .food {
+      height: 10%;
+      width: 70px;
+      position: absolute;
+      transform: translate(50%, -50%); }
+      .fridge .fridge-stuff .food img {
+        width: 100%;
+        position: absolute; }
+      .fridge .fridge-stuff .food .item1 {
+        top: 30%;
+        right: 30%; }
+      .fridge .fridge-stuff .food .item2 {
+        top: 30%;
+        right: -10%; }
+      .fridge .fridge-stuff .food .item3 {
+        top: 0;
+        right: 0; }
+    .fridge .fridge-stuff .cucumber {
+      top: 20%;
+      right: 10%; }
+    .fridge .fridge-stuff .bread {
+      top: 20%;
+      right: 20%; }
+    .fridge .fridge-stuff .carrot {
+      top: 20%;
+      right: 30%;
+      width: 120px; }
+    .fridge .fridge-stuff .cheese {
+      top: 20%;
+      right: 40%; }
+    .fridge .fridge-stuff .egg {
+      top: 35%;
+      right: 10%; }
+    .fridge .fridge-stuff .ham {
+      top: 35%;
+      right: 20%; }
+    .fridge .fridge-stuff .pear {
+      top: 35%;
+      right: 30%; }
+    .fridge .fridge-stuff .tomato {
+      top: 35%;
+      right: 40%; }
+    .fridge .fridge-stuff .steak {
+      top: 75%;
+      right: 40%; }
+    .fridge .fridge-stuff .potato {
+      top: 75%;
+      right: 20%; }
+    .fridge .fridge-stuff .rice {
+      top: 75%;
+      right: 10%; }
+    .fridge .fridge-stuff .lettuce {
+      top: 75%;
+      right: 30%; }
+    @media (max-width: 500px) {
+      .fridge .fridge-stuff .cucumber {
+        top: 20%;
+        right: 10%; }
+      .fridge .fridge-stuff .bread {
+        top: 20%;
+        right: 30%; }
+      .fridge .fridge-stuff .carrot {
+        top: 20%;
+        right: 60%;
+        width: 120px; }
+      .fridge .fridge-stuff .cheese {
+        top: 20%;
+        right: 80%; }
+      .fridge .fridge-stuff .egg {
+        top: 35%;
+        right: 10%; }
+      .fridge .fridge-stuff .ham {
+        top: 35%;
+        right: 30%; }
+      .fridge .fridge-stuff .pear {
+        top: 35%;
+        right: 60%; }
+      .fridge .fridge-stuff .tomato {
+        top: 35%;
+        right: 80%; }
+      .fridge .fridge-stuff .steak {
+        top: 75%;
+        right: 10%; }
+      .fridge .fridge-stuff .potato {
+        top: 75%;
+        right: 30%; }
+      .fridge .fridge-stuff .rice {
+        top: 75%;
+        right: 60%; }
+      .fridge .fridge-stuff .lettuce {
+        top: 75%;
+        right: 80%; } }
+  .fridge .bowl {
+    z-index: 1000;
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%); }
+  .fridge.active {
+    visibility: visible;
+    opacity: 1; }
+
+.phrases {
+  width: 50%;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; }
+  .phrases .nice {
+    transform: scale(0);
+    transition: 1s all; }
+    .phrases .nice .letter {
+      width: 10%; }
+    .phrases .nice .i {
+      width: 50px; }
+    .phrases .nice.active {
+      transform: scale(1); }
+  .phrases .nope {
+    transition: 1s all;
+    transform: scale(0);
+    position: absolute;
+    top: -120%;
+    width: 100%; }
+    .phrases .nope .letter {
+      width: 10%; }
+    .phrases .nope .a {
+      margin-left: 30%; }
+    .phrases .nope.active {
+      transform: scale(1); }
+  .phrases.active {
+    visibility: visible; }
+
+.overlay {
+  visibility: hidden;
+  transition: 1s all;
+  opacity: 0;
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8); }
+  .overlay .congrats {
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 56%;
+    transform: translate(-50%, -50%); }
+    .overlay .congrats .letter {
+      width: 10%; }
+    .overlay .congrats .a {
+      margin-left: 30%; }
+  .overlay .next {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .overlay.active {
+    visibility: visible;
+    opacity: 1; }
+
+/*# sourceMappingURL=main.css.map */

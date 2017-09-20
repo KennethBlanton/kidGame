@@ -1,0 +1,457 @@
+* {
+	box-sizing:border-box;
+}
+html, body {
+	width:100%;
+	height:100%;
+}
+.container {
+	overflow:hidden;
+	.background {
+		visibility:hidden;
+
+		margin-top:0;
+		background-image: url(../img/bg1.svg);
+		opacity: .5;
+		width:auto;
+		height:100%;
+		background-repeat:repeat-x;
+		background-size: cover;
+		transition:.5s all;
+		.fridge {
+			margin-top:-100%;
+		}
+		&.active {
+			visibility:visible;
+		}
+	}
+}
+.landing {
+	transition:.5s all;
+	visibility:hidden;
+	opacity:0;
+	width:100%;
+	height:100%;
+	img {
+		width:100%;
+	}	
+	.tomato1 {
+		width: 25%;
+	    position: absolute;
+	    left: 50%;
+	    top: 52%;
+	    transform: translate(-50%, -50%);
+    	.first {
+    		margin-bottom: 20%;
+    	}
+	}
+	&.active {
+		visibility:visible;
+		opacity:1;
+	}
+}
+.graph {
+	visibility:hidden;
+	opacity:0;
+	transition: 1s all;
+	.chart {		
+		width: 50%;
+    	top: 38%;
+    	left: 50%;
+	    position: absolute;
+	    transform: translate(-50%,-50%);
+	    img {
+	    	width:40%;
+	    }
+	    .group {
+	    	transition:.3s all;
+	    }
+	    .grains {
+	    	margin-left: 12%;		
+	    }
+	    .fruit {
+	    	position: absolute;
+		    top: 86.5%;
+		    left: 35.7%;
+		    transform: translate(-50%, -50%);
+		    width: 33%;
+	    }
+	    .milk {
+	    	position: absolute;
+		    top: 89%;
+		    left: 48.7%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1000;
+		    width: 30%;
+	    }
+	    .meat {
+	    	position: absolute;
+		    top: 87.4%;
+		    left: 68.4%;
+		    transform: translate(-50%, -50%);
+		    z-index: 100;
+		    width: 38%;
+	    }
+	    .veggies {
+	    	position: absolute;
+		    top: 41.6%;
+		    left: 69.1%;
+		    transform: translate(-50%, -50%);
+		    width: 40%;
+		    &.selected {
+		    	transform: translate(-50%, -50%) scale(1.2);
+    			left: 80%;
+    			top: 40%;
+		    }
+	    }
+	    .next {
+	    	opacity:0;
+	    	position:absolute;
+	    	transition:.5s all;
+	    	top:140%;
+	    	left:50%;
+	    	transform:translate(-50%,-50%);
+	    	&.active {
+	    		opacity:1;
+	    	}
+	    }
+	}
+	&.active {
+		visibility:visible;
+		opacity:1;
+
+	}
+}
+.recipe	 {
+	visibility:hidden;
+	opacity:0;
+	transition:.8s all;
+	.paper {
+		width:50%;
+    	top: 50%;
+    	left: 50%;
+	    position: absolute;
+	    transform: translate(-50%,-50%);
+	    transition:.5s all;
+	    .title {
+	    	position:absolute;
+	    	width:60%;
+	    	top:20%;
+	    	left:45%;
+	    	transform:translate(-50%, -50%);
+	    }
+	    .name {
+	    	width:60%;
+	    	position:absolute;
+	    	top:40%;
+	    	left:45%;
+	    	transform:translate(-50%, -50%);
+	    	img {
+	    		width: 20%;
+	    	}
+	    	.l {
+	    		width: 15%;
+	    	}
+	    }
+	    .foods {
+	    	width:80%;
+	    	position:absolute;
+	    	top:60%;
+	    	left:45%;
+	    	transform:translate(-50%, -50%);
+	    	img {
+	    		margin-right: 30%;
+	    		width:30%;
+	    	}
+	    	.item {
+	    		opacity:1;
+	    		transition:.3s all;
+	    		&.success {
+	    			opacity:0
+	    		}
+	    	}
+			.item1 {
+			}						
+			.item2 {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+    			width: 40%;
+			}			
+			.item3 {
+				position: absolute;
+			    top: 50%;
+			    left: 85%;
+			    transform: translate(-50%, -50%);
+			}			
+			.item4 {
+				position: absolute;
+			    top: 210%;
+			    left: 30%;
+			    transform: translate(-50%, -50%);
+			}			
+			.item5 {
+				position: absolute;
+			    top: 210%;
+			    left: 70%;
+			    transform: translate(-50%, -50%);
+			}		
+						
+	    }
+	}
+	.set {
+		left:25%;
+	}
+	.hidden {
+		left:-20%;
+	}
+	.move {
+		left:25%;
+	}
+	&.active {
+		visibility:visible;
+		opacity:1;
+	}
+}
+.fridge {
+	visibility:hidden;
+	opacity:0;
+	transition:1s all;
+	height:100%;
+	.fridge-cover {
+		margin-top:0;
+		background-image: url(../img/bg1.svg);
+		opacity: .5;
+		width:auto;
+		height:100%;
+		background-repeat:repeat-x;
+		background-size: cover;
+		transition:.5s all;
+	}
+	.fridge-stuff {
+		margin-left:50%;
+		width:50%;
+		height:100%;
+		.fridge-bg {
+			position:absolute;
+			right:0;
+			top:0;
+			height:100%;
+			width: auto;
+		}
+		.food {
+			height:10%;
+			width:70px;
+			position:absolute;
+			transform:translate(50%,-50%);
+			img {
+				width:100%;
+				position:absolute;
+			}
+			.item1 {
+				top: 30%;
+    			right: 30%;
+			}
+			.item2 {
+			top: 30%;
+    		right: -10%;
+			}
+			.item3 {
+				top:0;
+				right:0;
+			}
+		}
+		.cucumber {
+			top:20%;
+			right:10%;
+		}
+		.bread {
+			top:20%;
+			right:20%;
+		}
+		.carrot {
+			top:20%;
+			right:30%;
+			width:120px;
+		}
+		.cheese {
+			top:20%;
+			right:40%;
+		}
+		.egg {
+			top:35%;
+			right:10%;
+		}
+		.ham {
+			top:35%;
+			right:20%;
+		}
+		.pear {
+			top:35%;
+			right:30%;
+		}
+		.tomato {
+			top:35%;
+			right:40%;
+		}
+		.steak {
+			top:75%;
+			right:40%;
+		}
+		.potato {
+			top:75%;
+			right:20%;
+		}
+		.rice {
+			top:75%;
+			right:10%;
+		}
+		.lettuce {
+			top:75%;
+			right:30%;
+		}
+		@media (max-width:500px) {
+			.cucumber {
+				top:20%;
+				right:10%;
+			}
+			.bread {
+				top:20%;
+				right:30%;
+			}
+			.carrot {
+				top:20%;
+				right:60%;
+				width:120px;
+			}
+			.cheese {
+				top:20%;
+				right:80%;
+			}
+			.egg {
+				top:35%;
+				right:10%;
+			}
+			.ham {
+				top:35%;
+				right:30%;
+			}
+			.pear {
+				top:35%;
+				right:60%;
+			}
+			.tomato {
+				top:35%;
+				right:80%;
+			}
+			.steak {
+				top:75%;
+				right:10%;
+			}
+			.potato {
+				top:75%;
+				right:30%;
+			}
+			.rice {
+				top:75%;
+				right:60%;
+			}
+			.lettuce {
+				top:75%;
+				right:80%;
+			}
+		}
+	}
+	.bowl {
+		z-index:1000;
+		position:absolute;
+		width:20%;
+
+		bottom:0;
+		left:50%;
+		transform:translate(-50%);
+	}
+	&.active {
+		visibility:visible;
+		opacity:1;
+	}
+}
+.phrases {
+	width: 50%;
+	position:absolute;
+    top: 70%;
+    left: 60%;
+	transform:translate(-50%,-50%);
+	pointer-events:none;
+	.nice {
+		transform:scale(0);
+		transition:1s all;
+		.letter {
+			width:10%;
+		}
+		.i {
+			width:50px;
+		}
+		&.active {
+			transform:scale(1);
+		}
+	}
+	.nope {
+		transition:1s all;
+		transform:scale(0);
+		position: absolute;
+    	top: -120%;
+    	width: 100%;
+		.letter {
+			width:10%;
+		}
+		.a {
+			margin-left:30%;
+		}
+		&.active {
+			transform:scale(1);
+		}
+	}
+	&.active {
+		visibility:visible;
+	}
+}
+.overlay {
+	visibility:hidden;
+	transition:1s all;
+	opacity:0;
+	z-index:10000;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background:rgba(0,0,0,.8);
+	.congrats {
+		width:60%;
+		position:absolute;
+		top:20%;
+		left:56%;
+		transform:translate(-50%,-50%);
+		.letter {
+			width:10%;
+		}
+		.a {
+			margin-left:30%;
+		}
+	}
+	.next {
+		width:50%;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&.active {
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+
